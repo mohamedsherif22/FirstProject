@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Form</title>
+  <link rel="stylesheet" href="PaymentForm.css">
+</head>
+<body style="background-image:url(Background.jpg)"></div>
+</body>
+  <header>
+    <h1>Maze Workstation</h1>
+    <nav>
+      <ul>
+        <li><a href="HomePage.html">Home</a></li>
+        <li><a href="ItemsList.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="Login.html">Login/Register</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Payment Details</h1>
+    <form action="#" method="POST">
+      <div class="form-group">
+        <label for="name">Name on Card:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="card-number">Card Number:</label>
+        <input type="text" id="card-number" name="card-number" required>
+      </div>
+      <div class="form-group">
+        <label for="expiry-date">Expiry Date:</label>
+        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM / YY" required>
+      </div>
+      <div class="form-group">
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required>
+      </div>
+      <button type="submit" id="pay-now-btn">Pay Now</button>
+    </form>
+  </main>
+  <script>
+    const payNowBtn = document.getElementById('pay-now-btn');
+    
+    payNowBtn.addEventListener('click', function(event) {
+      event.preventDefault(); // prevent form submission
+      
+      // simulate payment processing with 2 second delay
+      setTimeout(function() {
+        alert('Payment Successful');
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
